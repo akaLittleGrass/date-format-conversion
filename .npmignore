@@ -3,6 +3,8 @@
 node_modules
 test
 src
+yarn.lock
+package-lock.json
 
 webpack.config.js
 .babelrc

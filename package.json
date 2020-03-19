@@ -1,6 +1,6 @@
 {
   "name": "date-format-conversion",
-  "version": "1.0.6",
+  "version": "1.0.9",
   "description": "A javascript function used to handle date formats",
   "main": "dist/bundle.js",
   "unpkg": "dist/bundle.js",
@@ -21,7 +21,12 @@
   ],
   "author": "akaLittleGrass(Haoyang Wei)",
   "license": "MIT",
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "jest": "^25.1.0",
+    "webpack": "^4.42.0",
+    "webpack-cli": "^3.3.11",
     "babel": "^6.5.1",
     "babel-core": "^6.26.3",
     "babel-jest": "^25.1.0",
@@ -29,11 +34,5 @@
     "babel-preset-env": "^1.7.0",
     "regenerator-runtime": "^0.13.5",
     "uglifyjs-webpack-plugin": "^2.2.0"
-  },
-  "devDependencies": {
-    "eslint": "^6.8.0",
-    "jest": "^25.1.0",
-    "webpack": "^4.42.0",
-    "webpack-cli": "^3.3.11"
   }
 }
