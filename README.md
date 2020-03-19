@@ -1,4 +1,4 @@
-# vuedragger
+# DateFormatConversion
 Just a javascript function you can use to do some date format conversion
 
 ## Basic usage
