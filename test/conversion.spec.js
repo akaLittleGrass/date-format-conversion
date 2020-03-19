@@ -46,4 +46,18 @@ describe('Common time format conversion', () => {
             expect(dateFormatter(1584596625304, 'MM-DD hh:mm:ss')).toBe('03-19 13:43:45');
         })
     })
+    describe('Input TimeStamp', () => {
+        test('Timestamp to MM-yyyy-dd', () => {
+            expect(dateFormatter(1584596625304, 'MM-yyyy-dd')).toBe('03-2020-19');
+        })
+        test('Timestamp to yyyy-MM-dd', () => {
+            expect(dateFormatter(1584596625304, 'yyyy-MM-dd')).toBe('2020-03-19');
+        })
+        test('Timestamp to yyyy/MM/dd', () => {
+            expect(dateFormatter(1584596625304, 'yyyy/MM/dd')).toBe('2020/03/19');
+        })
+        test('Timestamp to yyyy:MM:dd', () => {
+            expect(dateFormatter(1584596625304, 'yyyy:MM:dd')).toBe('2020:03:19');
+        })
+    })
 })
