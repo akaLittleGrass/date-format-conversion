@@ -1,6 +1,6 @@
 {
   "name": "date-format-conversion",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A javascript function used to handle date formats",
   "main": "dist/bundle.js",
   "unpkg": "dist/bundle.js",

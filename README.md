@@ -5,7 +5,7 @@ Just a javascript function you can use to do some date format conversion
 ```bash
 $ npm i date-format-conversion --save-dev
 ```
-Register the component:    
+To do:    
 ```js
 import dateFormatter from 'date-format-conversion';//the module would export a function, you can rename it
 
