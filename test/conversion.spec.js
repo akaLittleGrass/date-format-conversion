@@ -38,7 +38,7 @@ describe('Common time format conversion', () => {
     })
     describe('Invalid input', () => {
         test('Input aaa', () => {
-            expect(dateFormatter('aaa', 'MM-yyyy-dd')).toBe('Invalid date');
+            expect(dateFormatter('aaa', 'MM-yyyy-dd')).toBe('Invalid input');
         })
     })
     describe('Use hh、mm、ss', () => {

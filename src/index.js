@@ -6,7 +6,7 @@ export default function dateFormatter(date, format = 'yyyy/MM/dd') {
     } else if ((typeof date === 'number') || (typeof date === 'string' && !isNaN(Date.parse(date)))) {
         targetDateObj = new Date(date);
     }
-    if (!(targetDateObj instanceof Date) || targetDateObj.toString() === 'Invalid date') return 'Invalid date';
+    if (!(targetDateObj instanceof Date) || targetDateObj.toString() === 'Invalid date') return 'Invalid input';
     const numberList = [
         {
             regExp: /yyyy/i,
