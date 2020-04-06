@@ -1,5 +1,5 @@
 # date-format-conversion
-Just a javascript function you can use to do some date format conversion
+A javascript function,you can use it to do some date format conversion
 
 ## Basic usage
 ```bash
