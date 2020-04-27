@@ -63,7 +63,7 @@ export default function dateFormatter(date, format = 'yyyy/MM/dd') {
     // }
     let outPut = format;
     numberList.forEach(i => {
-        outPut = outPut.replace(i.regExp, i.value)
+        outPut = outPut.replace(i.regExp, i.value);
     })
     return outPut;
 }
