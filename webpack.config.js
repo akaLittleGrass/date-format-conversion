@@ -1,5 +1,5 @@
 const path = require('path');
-//const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = {
     entry: './src/index.js',
@@ -7,7 +7,8 @@ module.exports = {
         filename: 'bundle.js',
         path: path.resolve(__dirname, 'dist'),
         library: 'MomentFormatter',
-        libraryTarget: 'umd'
+        libraryTarget: 'umd',
+        globalObject: 'this'
     },
     module: {
         rules: [
@@ -18,11 +19,11 @@ module.exports = {
             },
         ]
     },
-    // optimization: {
-    //     minimizer: [
-    //         new UglifyJsPlugin({
-    //             test: /\.js(\?.*)?$/i,
-    //         }),
-    //     ],
-    // },
+    optimization: {
+        minimizer: [
+            new UglifyJsPlugin({
+                test: /\.js(\?.*)?$/i,
+            }),
+        ],
+    },
 };
