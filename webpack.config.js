@@ -6,7 +6,7 @@ module.exports = {
     output: {
         filename: 'bundle.js',
         path: path.resolve(__dirname, 'dist'),
-        library: 'MomentFormatter',
+        library: 'dateFormatter',
         libraryTarget: 'umd',
         globalObject: 'this'
     },
