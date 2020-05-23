@@ -7,6 +7,7 @@ yarn.lock
 package-lock.json
 
 rollup.config.js
+jest.config.js
 .babelrc
 .eslintrc.js
 .eslintignore
