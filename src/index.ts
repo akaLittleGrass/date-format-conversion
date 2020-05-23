@@ -1,16 +1,20 @@
 import digitsFormat from './digitsFormat';
-export default function dateFormatter(date, format = 'yyyy/MM/dd') {
-    let targetDateObj;
+interface numberItem {
+    regExp: RegExp;
+    value: string;
+};
+export default function dateFormatter(date: any, format = 'yyyy/MM/dd') {
+    let targetDateObj: object;
     if (date instanceof Date) {
         targetDateObj = date;
     } else if ((typeof date === 'number') || (typeof date === 'string' && !isNaN(Date.parse(date)))) {
         targetDateObj = new Date(date);
     }
     if (!(targetDateObj instanceof Date) || targetDateObj.toString() === 'Invalid date') return 'Invalid input';
-    const numberList = [
+    const numberList: Array<numberItem> = [
         {
             regExp: /yyyy/i,
-            value: targetDateObj.getFullYear()
+            value: String(targetDateObj.getFullYear())
         },
         {
             regExp: /yy/i,
@@ -22,7 +26,7 @@ export default function dateFormatter(date, format = 'yyyy/MM/dd') {
         },
         {
             regExp: /M/,
-            value: targetDateObj.getMonth() + 1
+            value: String(targetDateObj.getMonth() + 1)
         },
         {
             regExp: /dd/i,
@@ -30,7 +34,7 @@ export default function dateFormatter(date, format = 'yyyy/MM/dd') {
         },
         {
             regExp: /d/i,
-            value: targetDateObj.getDate()
+            value: String(targetDateObj.getDate())
         },
         {
             regExp: /hh/i,
@@ -38,7 +42,7 @@ export default function dateFormatter(date, format = 'yyyy/MM/dd') {
         },
         {
             regExp: /h/i,
-            value: targetDateObj.getHours()
+            value: String(targetDateObj.getHours())
         },
         {
             regExp: /mm/,
@@ -46,7 +50,7 @@ export default function dateFormatter(date, format = 'yyyy/MM/dd') {
         },
         {
             regExp: /m/,
-            value: targetDateObj.getMinutes(),
+            value: String(targetDateObj.getMinutes()),
         },
         {
             regExp: /ss/i,
@@ -54,14 +58,14 @@ export default function dateFormatter(date, format = 'yyyy/MM/dd') {
         },
         {
             regExp: /s/i,
-            value: targetDateObj.getSeconds()
+            value: String(targetDateObj.getSeconds())
         }
     ];
     /* for-of loops here would trigger a babel's bug */
     // for (const item of numberList) {
     //     outPut = outPut.replace(item.regExp, item.value);
     // }
-    let outPut = format;
+    let outPut: string = format;
     numberList.forEach(i => {
         outPut = outPut.replace(i.regExp, i.value);
     })

@@ -1,5 +1,5 @@
 # date-format-conversion
-A javascript function used to do some date format conversion
+Converter used to do some date format conversion
 
 ## Basic usage
 ```bash
@@ -7,7 +7,8 @@ $ npm i date-format-conversion --save-dev
 ```
 To do:    
 ```js
-import dateFormatter from 'date-format-conversion';//the module would export a function, you can also rename it
+import dateFormatter from 'date-format-conversion';
+//the module would export a function, you can also rename it
 
 /*Input string*/
 dateFormatter('2020-03-01', 'yyyy/MM/dd');//'2020/03/01'
