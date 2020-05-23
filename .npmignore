@@ -6,7 +6,7 @@ src
 yarn.lock
 package-lock.json
 
-webpack.config.js
+rollup.config.js
 .babelrc
 .eslintrc.js
 .eslintignore
