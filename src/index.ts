@@ -61,10 +61,6 @@ export default function dateFormatter(date: any, format = 'yyyy/MM/dd') {
             value: String(targetDateObj.getSeconds())
         }
     ];
-    /* for-of loops here would trigger a babel's bug */
-    // for (const item of numberList) {
-    //     outPut = outPut.replace(item.regExp, item.value);
-    // }
     let outPut: string = format;
     numberList.forEach(i => {
         outPut = outPut.replace(i.regExp, i.value);
