@@ -1,5 +1,5 @@
 import digitsFormat from './digitsFormat';
-interface NumberListItem {
+interface numberItem {
     regExp: RegExp;
     value: string;
 };
@@ -11,7 +11,7 @@ export default function dateFormatter(date: any, format = 'yyyy/MM/dd') {
         targetDateObj = new Date(date);
     }
     if (!(targetDateObj instanceof Date) || targetDateObj.toString() === 'Invalid date') return 'Invalid input';
-    const numberList: Array<NumberListItem> = [
+    const numberList: Array<numberItem> = [
         {
             regExp: /yyyy/i,
             value: String(targetDateObj.getFullYear())
